@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try1st.tech - Investor Funding Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2d7a3a;
+        }
+
+        .logo span {
+            color: #d4af37;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 600;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #2d7a3a;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2d7a3a 0%, #1a1a1a 100%);
+            color: #ffffff;
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 64px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero .accent {
+            color: #d4af37;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #d4af37;
+            color: #1a1a1a;
+            padding: 16px 40px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #c41e3a;
+            color: #ffffff;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        section h2 .accent {
+            color: #2d7a3a;
+        }
+
+        /* Problem Section */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .problem-card {
+            background: #f5f5f5;
+            padding: 40px;
+            border-left: 5px solid #c41e3a;
+        }
+
+        .problem-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .problem-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Solution Section */
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            align-items: center;
+        }
+
+        .solution-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #2d7a3a;
+        }
+
+        .solution-features {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .solution-features li {
+            padding: 15px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .solution-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2d7a3a;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .solution-visual {
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+            padding: 40px;
+            border-left: 5px solid #d4af37;
+            border-radius: 4px;
+        }
+
+        /* Market Section */
+        .market-metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .metric {
+            background: linear-gradient(135deg, #2d7a3a 0%, #1a4d2e 100%);
+            color: #ffffff;
+            padding: 40px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .metric-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            opacity: 0.9;
+        }
+
+        /* Funding Section */
+        .funding-container {
+            background: #f5f5f5;
+            padding: 60px;
+            border-radius: 4px;
+        }
+
+        .funding-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .funding-header h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #2d7a3a;
+        }
+
+        .funding-header p {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .funding-phases {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .phase-card {
+            background: #ffffff;
+            padding: 30px;
+            border-left: 5px solid #d4af37;
+            border-radius: 4px;
+        }
+
+        .phase-card.phase-1 {
+            border-left-color: #c41e3a;
+            background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+        }
+
+        .phase-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .phase-card .timeline {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .phase-card .cost {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #2d7a3a;
+            margin-bottom: 15px;
+        }
+
+        .phase-card.phase-1 .cost {
+            color: #c41e3a;
+        }
+
+        .phase-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .funding-note {
+            background: #ffffff;
+            padding: 30px;
+            margin-top: 30px;
+            border-left: 5px solid #2d7a3a;
+            border-radius: 4px;
+        }
+
+        .funding-note h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #2d7a3a;
+        }
+
+        .funding-note p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Financials Section */
+        .financials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .revenue-model {
+            background: #f5f5f5;
+            padding: 40px;
+            border-radius: 4px;
+        }
+
+        .revenue-model h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #2d7a3a;
+        }
+
+        .tier {
+            background: #ffffff;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #d4af37;
+            border-radius: 4px;
+        }
+
+        .tier h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .tier-price {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #2d7a3a;
+            margin-bottom: 10px;
+        }
+
+        .tier-features {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .projections-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+        }
+
+        .projections-table th {
+            background: #2d7a3a;
+            color: #ffffff;
+            padding: 15px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .projections-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 14px;
+        }
+
+        .projections-table tr:hover {
+            background: #f5f5f5;
+        }
+
+        .projections-table .metric-label {
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .projections-table .positive {
+            color: #2d7a3a;
+            font-weight: 700;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .team-member {
+            text-align: center;
+            background: #f5f5f5;
+            padding: 40px;
+            border-radius: 4px;
+        }
+
+        .team-member h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #1a1a1a;
+        }
+
+        .team-member .role {
+            color: #2d7a3a;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .team-member p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            background: linear-gradient(135deg, #2d7a3a 0%, #1a1a1a 100%);
+            color: #ffffff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            color: #ffffff;
+            margin-bottom: 40px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .contact-item h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .contact-item p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .contact-item a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .problem-grid,
+            .market-metrics,
+            .funding-phases,
+            .team-grid,
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .financials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 20px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            section h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <img src="try1st_logo.jpg" alt="try1st.tech Logo" style="width: 50px; height: 50px; object-fit: contain;">
+                <div>
+                    <div class="logo">try<span>1st</span>.tech</div>
+                    <div style="font-size: 12px; color: #2d7a3a; font-weight: 600; margin-top: 2px;">Zama First, You've Got This!</div>
+                </div>
+            </div>
+            <ul>
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#solution">Solution</a></li>
+                <li><a href="#platform">Platform</a></li>
+                <li><a href="#market">Market</a></li>
+                <li><a href="#funding">Funding</a></li>
+                <li><a href="#budget">Budget</a></li>
+                <li><a href="#financials">Financials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div style="margin-bottom: 40px; text-align: center;">
+                <img src="try1st_logo.jpg" alt="try1st.tech Official Logo" style="width: 180px; height: auto; object-fit: contain; margin: 0 auto; display: block;">
+            </div>
+            <h1>Transform <span class="accent">South African</span> Education</h1>
+            <p>AI-powered learning platform delivering CAPS-aligned education to 2.3M primary school learners</p>
+            <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.9; font-style: italic;">"Zama First, You've Got This!"</p>
+            <button class="cta-button">Invest in Education's Future</button>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem">
+        <div class="container">
+            <h2>The <span class="accent">Problem</span></h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>📚 Curriculum Misalignment</h3>
+                    <p>Most global EdTech platforms don't align with South Africa's CAPS curriculum, leaving learners unprepared for local assessments and exams.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>💻 Technology Access Gap</h3>
+                    <p>Limited internet connectivity and expensive data plans prevent 85% of South African learners from accessing quality online education.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>🎓 Lack of Personalization</h3>
+                    <p>Generic AI tutors provide one-size-fits-all answers without understanding each learner's unique needs and learning style.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution">
+        <div class="container">
+            <div class="solution-grid">
+                <div class="solution-content">
+                    <h3>Our Solution: try1st.tech</h3>
+                    <p>Zama First, You've Got This! – A revolutionary AI-powered learning platform built specifically for South African primary schools.</p>
+                    <ul class="solution-features">
+                        <li><strong>CAPS-Aligned Content:</strong> 500+ questions mapped to South African curriculum standards</li>
+                        <li><strong>AI-Powered Feedback:</strong> Personalized explanations for every answer, correct or incorrect</li>
+                        <li><strong>Growth Mindset:</strong> Supportive messaging that celebrates effort and encourages continuous learning</li>
+                        <li><strong>Low-Data Optimization:</strong> ~15KB per session – works on 2G/3G connections</li>
+                        <li><strong>Multi-Subject Coverage:</strong> Math, English, Science, Social Studies for Grades 4-7</li>
+                        <li><strong>Affordable Pricing:</strong> Freemium to Premium to School Licensing models</li>
+                    </ul>
+                </div>
+                <div class="solution-visual">
+                    <h4 style="font-family: 'Montserrat', sans-serif; font-weight: 700; margin-bottom: 20px; color: #2d7a3a;">The try1st.tech Difference</h4>
+                    <p style="margin-bottom: 15px;"><strong>Traditional AI Tutors:</strong></p>
+                    <p style="color: #c41e3a; margin-bottom: 20px;">❌ Just gives answers ❌ Encourages shortcuts ❌ No real learning ❌ Generic global content</p>
+                    <p style="margin-bottom: 15px;"><strong>try1st.tech:</strong></p>
+                    <p style="color: #2d7a3a;">✓ You TRY FIRST, then get help ✓ Tests knowledge ✓ Builds real understanding ✓ CAPS-aligned for SA learners</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Section -->
+    <section id="platform">
+        <div class="container">
+            <h2>The <span class="accent">Platform</span></h2>
+            
+            <div style="margin-bottom: 60px;">
+                <img src="comparison.jpg" alt="try1st.tech vs ChatGPT Comparison" style="width: 100%; max-width: 900px; height: auto; object-fit: contain; margin: 0 auto; display: block; border-radius: 4px;">
+            </div>
+
+            <h3 style="font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 700; margin-bottom: 40px; text-align: center; color: #2d7a3a;">How try1st.tech Works: 7-Step Learning Journey</h3>
+
+            <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 15px; margin-bottom: 60px;">
+                <div style="background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%); padding: 20px; border-radius: 4px; text-align: center; border-top: 5px solid #2d7a3a;">
+                    <div style="font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 800; color: #2d7a3a; margin-bottom: 10px;">1</div>
+                    <div style="font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">Login</div>
+                    <div style="font-size: 12px; color: #666; line-height: 1.5;">Learner enters name and phone</div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%); padding: 20px; border-radius: 4px; text-align: center; border-top: 5px solid #d4af37;">
+                    <div style="font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 800; color: #2d7a3a; margin-bottom: 10px;">2</div>
+                    <div style="font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">Welcome</div>
+                    <div style="font-size: 12px; color: #666; line-height: 1.5;">Personalized greeting with badge</div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%); padding: 20px; border-radius: 4px; text-align: center; border-top: 5px solid #c41e3a;">
+                    <div style="font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 800; color: #2d7a3a; margin-bottom: 10px;">3</div>
+                    <div style="font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">Learn</div>
+                    <div style="font-size: 12px; color: #666; line-height: 1.5;">How platform works guide</div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%); padding: 20px; border-radius: 4px; text-align: center; border-top: 5px solid #2d7a3a;">
+                    <div style="font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 800; color: #2d7a3a; margin-bottom: 10px;">4</div>
+                    <div style="font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">Select Grade</div>
+                    <div style="font-size: 12px; color: #666; line-height: 1.5;">Choose Grades 4-7</div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%); padding: 20px; border-radius: 4px; text-align: center; border-top: 5px solid #d4af37;">
+                    <div style="font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 800; color: #2d7a3a; margin-bottom: 10px;">5</div>
+                    <div style="font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">Ask Question</div>
+                    <div style="font-size: 12px; color: #666; line-height: 1.5;">Type or upload image</div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%); padding: 20px; border-radius: 4px; text-align: center; border-top: 5px solid #c41e3a;">
+                    <div style="font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 800; color: #2d7a3a; margin-bottom: 10px;">6</div>
+                    <div style="font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">Try First!</div>
+                    <div style="font-size: 12px; color: #666; line-height: 1.5;">Learner attempts answer</div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%); padding: 20px; border-radius: 4px; text-align: center; border-top: 5px solid #2d7a3a;">
+                    <div style="font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 800; color: #2d7a3a; margin-bottom: 10px;">7</div>
+                    <div style="font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">Get Feedback</div>
+                    <div style="font-size: 12px; color: #666; line-height: 1.5;">AI-powered explanation</div>
+                </div>
+            </div>
+
+            <div style="background: #f5f5f5; padding: 40px; border-radius: 4px; border-left: 5px solid #2d7a3a;">
+                <h3 style="font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #2d7a3a;">🎓 Key Platform Features</h3>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                    <div style="background: #ffffff; padding: 20px; border-radius: 4px; border-left: 5px solid #d4af37;">
+                        <div style="font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 10px; color: #1a1a1a;">✓ Zama First Philosophy</div>
+                        <div style="font-size: 14px; color: #666; line-height: 1.6;">Learners attempt questions first before receiving AI-powered help, building confidence and real understanding.</div>
+                    </div>
+                    <div style="background: #ffffff; padding: 20px; border-radius: 4px; border-left: 5px solid #d4af37;">
+                        <div style="font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 10px; color: #1a1a1a;">✓ CAPS Alignment</div>
+                        <div style="font-size: 14px; color: #666; line-height: 1.6;">Every question and answer aligned with South African CAPS curriculum standards for Grades 4-7.</div>
+                    </div>
+                    <div style="background: #ffffff; padding: 20px; border-radius: 4px; border-left: 5px solid #2d7a3a;">
+                        <div style="font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 10px; color: #1a1a1a;">✓ Personalized Feedback</div>
+                        <div style="font-size: 14px; color: #666; line-height: 1.6;">Congratulations for correct answers, Nice Attempt for incorrect - growth mindset messaging.</div>
+                    </div>
+                    <div style="background: #ffffff; padding: 20px; border-radius: 4px; border-left: 5px solid #2d7a3a;">
+                        <div style="font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 10px; color: #1a1a1a;">✓ Low Data Consumption</div>
+                        <div style="font-size: 14px; color: #666; line-height: 1.6;">~15KB per session - works on 2G/3G connections, perfect for South African learners with limited data.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Section -->
+    <section id="market">
+        <div class="container">
+            <h2>Market <span class="accent">Opportunity</span></h2>
+            <div class="market-metrics">
+                <div class="metric">
+                    <div class="metric-number">2.3M</div>
+                    <div class="metric-label">Primary School Learners (Grades 4-7)</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">15%</div>
+                    <div class="metric-label">EdTech Adoption Growth Rate</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">85%</div>
+                    <div class="metric-label">Smartphone Penetration in SA</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">R5B+</div>
+                    <div class="metric-label">Addressable Market Size</div>
+                </div>
+            </div>
+            <div style="background: #ffffff; padding: 40px; border-radius: 4px; border-left: 5px solid #d4af37;">
+                <h3 style="font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #2d7a3a;">Why Now?</h3>
+                <ul style="list-style: none; color: #555; line-height: 1.8;">
+                    <li style="padding: 8px 0;"><strong>✓ Government Mandate:</strong> CAPS curriculum is mandatory for all schools</li>
+                    <li style="padding: 8px 0;"><strong>✓ Digital Transformation:</strong> Post-COVID acceleration of EdTech adoption</li>
+                    <li style="padding: 8px 0;"><strong>✓ Mobile-First Market:</strong> Smartphones more common than computers in SA</li>
+                    <li style="padding: 8px 0;"><strong>✓ Underserved Segment:</strong> Few affordable AI solutions for primary schools</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funding Section -->
+    <section id="funding">
+        <div class="container">
+            <h2>Funding <span class="accent">Strategy</span></h2>
+            <div class="funding-container">
+                <div class="funding-header">
+                    <h3>Phase 1: Seed Funding Required</h3>
+                    <p>We're seeking R550,000 to launch try1st.tech and achieve profitability within 3 months. Phases 2-4 will be self-funded from Phase 1 profits.</p>
+                </div>
+
+                <div class="funding-phases">
+                    <div class="phase-card phase-1">
+                        <h4>🚀 Phase 1</h4>
+                        <div class="timeline">Months 1-3</div>
+                        <div class="cost">R550,000</div>
+                        <p><strong>MVP Launch</strong> – 500+ CAPS questions, production infrastructure, initial user acquisition</p>
+                    </div>
+
+                    <div class="phase-card">
+                        <h4>📊 Phase 2</h4>
+                        <div class="timeline">Months 4-6</div>
+                        <div class="cost">R1,620,000</div>
+                        <p><strong>Self-Funded</strong> – Dashboards, mobile apps, advanced analytics (funded from Phase 1 profits)</p>
+                    </div>
+
+                    <div class="phase-card">
+                        <h4>📈 Phase 3</h4>
+                        <div class="timeline">Months 7-12</div>
+                        <div class="cost">R1,620,000</div>
+                        <p><strong>Self-Funded</strong> – Multi-school scaling, monetization, enterprise features (funded from Phase 1 profits)</p>
+                    </div>
+
+                    <div class="phase-card">
+                        <h4>🌍 Phase 4</h4>
+                        <div class="timeline">Year 2+</div>
+                        <div class="cost">Ongoing</div>
+                        <p><strong>Self-Funded</strong> – Regional expansion, enterprise partnerships, advanced AI (funded from operations)</p>
+                    </div>
+                </div>
+
+                <div class="funding-note">
+                    <h4>💰 Why This Works: The Self-Funding Model</h4>
+                    <p><strong>Phase 1 Profitability:</strong> By Month 3, try1st.tech will generate R204,500 in monthly recurring revenue against R3,200 in monthly operating costs – a 98.4% profit margin. This means Phase 1 investment (R550,000) will be fully recovered by Month 3, with subsequent phases funded entirely from operational profits. By Month 12, monthly revenue will reach R4,335,000, enabling rapid scaling without additional external funding.</p>
+                </div>
+
+                <div style="margin-top: 40px; background: #ffffff; padding: 40px; border-radius: 4px; border-left: 5px solid #d4af37;">
+                    <h4 style="font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 30px; color: #2d7a3a;">💰 Phase 1 Budget Breakdown: R550,000</h4>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 30px;">
+                        <div style="background: #f5f5f5; padding: 20px; border-radius: 4px; border-left: 5px solid #2d7a3a;">
+                            <div style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 700; color: #2d7a3a; margin-bottom: 8px;">Backend Development</div>
+                            <div style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">R180,000</div>
+                            <div style="font-size: 13px; color: #666; line-height: 1.6;">
+                                • API architecture & design<br>
+                                • PostgreSQL database setup<br>
+                                • Authentication system<br>
+                                • Payment integration (Stripe)<br>
+                                • Server deployment & setup
+                            </div>
+                        </div>
+
+                        <div style="background: #f5f5f5; padding: 20px; border-radius: 4px; border-left: 5px solid #d4af37;">
+                            <div style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 700; color: #2d7a3a; margin-bottom: 8px;">Frontend Development</div>
+                            <div style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">R100,000</div>
+                            <div style="font-size: 13px; color: #666; line-height: 1.6;">
+                                • React UI optimization<br>
+                                • Mobile responsiveness<br>
+                                • Performance tuning<br>
+                                • UX/UI refinement<br>
+                                • Cross-browser testing
+                            </div>
+                        </div>
+
+                        <div style="background: #f5f5f5; padding: 20px; border-radius: 4px; border-left: 5px solid #c41e3a;">
+                            <div style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 700; color: #2d7a3a; margin-bottom: 8px;">CAPS Question Bank</div>
+                            <div style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">R120,000</div>
+                            <div style="font-size: 13px; color: #666; line-height: 1.6;">
+                                • 500+ CAPS-aligned questions<br>
+                                • Curriculum expert fees<br>
+                                • Question validation & testing<br>
+                                • Feedback template creation<br>
+                                • Subject matter review
+                            </div>
+                        </div>
+
+                        <div style="background: #f5f5f5; padding: 20px; border-radius: 4px; border-left: 5px solid #c41e3a;">
+                            <div style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 700; color: #2d7a3a; margin-bottom: 8px;">Infrastructure & DevOps</div>
+                            <div style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">R80,000</div>
+                            <div style="font-size: 13px; color: #666; line-height: 1.6;">
+                                • AWS setup & configuration<br>
+                                • CI/CD pipeline setup<br>
+                                • Monitoring & logging<br>
+                                • Security audit<br>
+                                • Backup & disaster recovery
+                            </div>
+                        </div>
+
+                        <div style="background: #f5f5f5; padding: 20px; border-radius: 4px; border-left: 5px solid #2d7a3a;">
+                            <div style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 700; color: #2d7a3a; margin-bottom: 8px;">Quality Assurance</div>
+                            <div style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">R50,000</div>
+                            <div style="font-size: 13px; color: #666; line-height: 1.6;">
+                                • Comprehensive testing<br>
+                                • Bug tracking & fixes<br>
+                                • Performance testing<br>
+                                • User acceptance testing<br>
+                                • Documentation
+                            </div>
+                        </div>
+
+                        <div style="background: #f5f5f5; padding: 20px; border-radius: 4px; border-left: 5px solid #d4af37;">
+                            <div style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 700; color: #2d7a3a; margin-bottom: 8px;">Marketing & Partnerships</div>
+                            <div style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">R20,000</div>
+                            <div style="font-size: 13px; color: #666; line-height: 1.6;">
+                                • School partnership outreach<br>
+                                • Marketing materials<br>
+                                • Pilot school recruitment<br>
+                                • Teacher training prep<br>
+                                • Case study development
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: #f0f7f4; padding: 20px; border-radius: 4px; border-left: 5px solid #2d7a3a;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; color: #2d7a3a; margin-bottom: 5px;">TOTAL PHASE 1 INVESTMENT</div>
+                                <div style="font-size: 13px; color: #666;">Development, infrastructure, content & marketing</div>
+                            </div>
+                            <div style="font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 800; color: #2d7a3a;">R550,000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financials Section -->
+    <section id="financials">
+        <div class="container">
+            <h2>Financial <span class="accent">Projections</span></h2>
+
+            <div class="financials-grid">
+                <div class="revenue-model">
+                    <h3>Revenue Model</h3>
+
+                    <div class="tier">
+                        <h4>🎓 Freemium Tier</h4>
+                        <div class="tier-price">Free</div>
+                        <div class="tier-features">
+                            • 10 questions/month<br>
+                            • Basic feedback<br>
+                            • Goal: User acquisition
+                        </div>
+                    </div>
+
+                    <div class="tier">
+                        <h4>⭐ Premium Tier</h4>
+                        <div class="tier-price">R49/month</div>
+                        <div class="tier-features">
+                            • Unlimited questions<br>
+                            • Advanced feedback<br>
+                            • Personal dashboard<br>
+                            • Target: Individual learners
+                        </div>
+                    </div>
+
+                    <div class="tier">
+                        <h4>🏫 School Licensing</h4>
+                        <div class="tier-price">R25/learner/month</div>
+                        <div class="tier-features">
+                            • Unlimited access<br>
+                            • Educator tools<br>
+                            • Class management<br>
+                            • Target: Primary schools
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 30px; color: #2d7a3a;">Key Metrics</h3>
+                    <div style="background: #f5f5f5; padding: 20px; border-radius: 4px; margin-bottom: 20px;">
+                        <p style="margin-bottom: 10px;"><strong>User Acquisition Cost (UAC):</strong> <span style="color: #2d7a3a; font-weight: 700;">R50-100</span></p>
+                        <p style="margin-bottom: 10px;"><strong>Lifetime Value (LTV):</strong> <span style="color: #2d7a3a; font-weight: 700;">R500-1,000</span></p>
+                        <p style="margin-bottom: 10px;"><strong>LTV:UAC Ratio:</strong> <span style="color: #2d7a3a; font-weight: 700;">5:1+</span></p>
+                        <p style="margin-bottom: 10px;"><strong>Break-Even:</strong> <span style="color: #2d7a3a; font-weight: 700;">Month 2-3</span></p>
+                        <p><strong>Profit Margin:</strong> <span style="color: #2d7a3a; font-weight: 700;">98%+</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 30px; color: #2d7a3a; text-align: center;">Revenue & Growth Projections</h3>
+            <table class="projections-table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Month 3</th>
+                        <th>Month 6</th>
+                        <th>Month 12</th>
+                        <th>Year 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="metric-label">Freemium Users</td>
+                        <td>5,000</td>
+                        <td>25,000</td>
+                        <td>100,000</td>
+                        <td>500,000</td>
+                    </tr>
+                    <tr>
+                        <td class="metric-label">Premium Users</td>
+                        <td>500</td>
+                        <td>3,000</td>
+                        <td>15,000</td>
+                        <td>75,000</td>
+                    </tr>
+                    <tr>
+                        <td class="metric-label">School Licenses</td>
+                        <td>10 schools</td>
+                        <td>50 schools</td>
+                        <td>200 schools</td>
+                        <td>1,000 schools</td>
+                    </tr>
+                    <tr>
+                        <td class="metric-label">Monthly Revenue</td>
+                        <td class="positive">R204,500</td>
+                        <td class="positive">R1,047,000</td>
+                        <td class="positive">R4,335,000</td>
+                        <td class="positive">R21,675,000</td>
+                    </tr>
+                    <tr>
+                        <td class="metric-label">Operating Costs</td>
+                        <td>R3,200</td>
+                        <td>R8,600</td>
+                        <td>R15,800</td>
+                        <td>R45,000</td>
+                    </tr>
+                    <tr>
+                        <td class="metric-label">Monthly Profit</td>
+                        <td class="positive">R201,300</td>
+                        <td class="positive">R1,038,400</td>
+                        <td class="positive">R4,319,200</td>
+                        <td class="positive">R21,630,000</td>
+                    </tr>
+                    <tr>
+                        <td class="metric-label">Profit Margin</td>
+                        <td class="positive">98.4%</td>
+                        <td class="positive">99.2%</td>
+                        <td class="positive">99.6%</td>
+                        <td class="positive">99.8%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <h2>Our <span class="accent">Team</span></h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3>Ntokozo "Lily" Bophela</h3>
+                    <div class="role">Founder & CEO</div>
+                    <p>Education innovator with deep understanding of South African primary education and passion for democratizing AI-powered learning.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Technical Lead</h3>
+                    <div class="role">Co-Founder (Hiring)</div>
+                    <p>Experienced full-stack developer with expertise in scalable infrastructure, AI integration, and EdTech platforms.</p>
+                </div>
+                <div class="team-member">
+                    <h3>CAPS Curriculum Expert</h3>
+                    <div class="role">Content Director (Hiring)</div>
+                    <p>Certified educator with 10+ years experience in South African primary schools and CAPS curriculum implementation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-container" id="contact">
+        <div class="container">
+            <h2>Get <span class="accent">Involved</span></h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <p><a href="mailto:info@nbdigitalmarketing.co.za">info@nbdigitalmarketing.co.za</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>📞 Call</h3>
+                    <p><a href="tel:+27723713114">+27 72 371 3114</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>💬 WhatsApp</h3>
+                    <p><a href="https://wa.me/27696831558">+27 69 683 1558</a></p>
+                </div>
+            </div>
+            <p style="font-size: 18px; margin-bottom: 20px;">Join us in transforming education for 2.3M South African learners</p>
+            <p style="opacity: 0.8;">try1st.tech is an e-commerce project by <strong>NB Digital Marketing Agency</strong></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 try1st.tech. All rights reserved. | Transforming South African Education</p>
+    </footer>
+</body>
+</html>
